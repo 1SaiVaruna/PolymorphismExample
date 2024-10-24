@@ -29,18 +29,18 @@ namespace PolymorphismExample
 
         }
 
-        internal class MalwareAttack : Attack
-        {
-            public MalwareAttack()
-            {
-                Name = "Malware Infection";
-            }
+    }
 
-            public override void DetectAttack()
-            {
-                Console.WriteLine($"Detecting {Name}: Analyzing system logs for suspicious activitiy...");
-            }
+    internal class MalwareAttack : Attack
+    {
+        public MalwareAttack()
+        {
+            Name = "Malware Infection";
         }
 
+        public override void DetectAttack()
+        {
+            Console.WriteLine($"Detecting {Name}: Analyzing system logs for suspicious activitiy...");
+        }
     }
 }
