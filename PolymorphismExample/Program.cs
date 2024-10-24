@@ -4,7 +4,23 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            RunIDS();
+
+            Console.ReadLine();
+        }
+
+        static void RunIDS()
+        {
+            Attack[] attacks = new Attack[]
+            {
+                new DoSAttack(),
+                new MalwareAttack()
+            };
+
+            foreach (Attack attack in attacks)
+            {
+                attack.DetectAttack();
+            }
         }
     }
 }
